@@ -12,24 +12,23 @@ window.addEventListener("DOMContentLoaded", () => {
             if (resp.ok) {
                 return resp.json();
             } else {
-                throw new Error("Error getting the images");
+                throw new Error("Errore nella visualizzazione dello shop");
             }
         })
         .then((products) => {
             const row = document.getElementById("row");
-            console.log(row);
-            console.log(products);
+            
             products.forEach((product) => {
                 const col = document.createElement("div");
                 col.classList.add("col");
-                col.innerHTML = `<div class="card"> 
+                col.innerHTML = `<div class="card h-100"> 
                             <img src=${product.imageUrl} class="card-img-top" alt="...">
-                            <div class="card-body position-relative border border-2"> 
+                            <div class="card-body border border-2"> 
                             <p class="card-text">${product.name}</p> 
                             <p class="card-text small">By ${product.brand}</p>
-                            <p class="card-text">€${product.price}</p> 
-                            <a href="details.html?appId=${product._id}" class="btn btn-primary">Details</a>
-                            <a href="backoffice.html?appId=${product._id}" class="btn btn-primary">Edit</a>
+                            <p class="card-text text-success">€${product.price}</p> 
+                            <a href="details.html?appId=${product._id}" class="btn btn-success">Scopri di più</a>
+                            <a href="backoffice.html?appId=${product._id}" class="btn btn-dark">Modifica</a>
                             </div>
                             </div>`;
                 row.appendChild(col);
