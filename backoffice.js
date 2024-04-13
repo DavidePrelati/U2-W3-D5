@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (id) {
        
-        subtitle.innerText = "— Modifica appuntamento"
+        subtitle.innerText = "— Modifica l'oggetto selezionato"
         btnSubmit.classList.remove("btn-primary")
         btnSubmit.classList.add("btn-success")
         btnSubmit.innerText = "Modifica"

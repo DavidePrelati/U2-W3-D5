@@ -24,10 +24,10 @@ window.addEventListener("DOMContentLoaded", () => {
             console.log(product);
             const col = document.createElement("div");
             col.classList.add("col");
-            col.innerHTML = `<div class="card  mb-3 pt-4" >
+            col.innerHTML = `<div class="card " >
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src=${product.imageUrl} class="img-fluid rounded-start" style="height: 350px;">
+                        <img src=${product.imageUrl} class="img-fluid px-3 py-3" style="height: 100%;">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

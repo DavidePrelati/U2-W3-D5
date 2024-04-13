@@ -23,8 +23,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 const col = document.createElement("div");
                 col.classList.add("col");
                 col.innerHTML = `<div class="card shadow-sm h-100"> 
-                            <img src=${product.imageUrl} class="img-fluid card-img-top" style="height: 200px;">
-                            <div class="card-body mt-auto border border-2"> 
+                            <img src=${product.imageUrl} class="img-fluid card-img-top px-3 py-3" style="height: 200px;">
+                            <div class="card-body "> 
                             <h3 class="card-text">${product.name}</h3> 
                             <p class="card-text small">By ${product.brand}</p>
                             <p class="card-text text-success">€${product.price}</p> 
