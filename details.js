@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
             console.log(product);
             const col = document.createElement("div");
             col.classList.add("col");
-            col.innerHTML = `<div class="card  mb-3" >
+            col.innerHTML = `<div class="card  mb-3 pt-4" >
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src=${product.imageUrl} class="img-fluid rounded-start" style="height: 350px;">
@@ -33,13 +33,14 @@ window.addEventListener("DOMContentLoaded", () => {
                         <div class="card-body">
                             <h3 class="card-title pt-4">${product.name}</h3>
                             <p class="card-text pt-4">${product.brand}</p>
+                            <p class="card-text small">${product.description}</p>
                             <p class="card-text pt-4">€${product.price}</p>
                             <p class="card-text pt-4"><small class="text-body-secondary">${product._id}</small></p>
                         </div>
                     </div>
                 </div>
             </div>`;
-            
+
             row.appendChild(col);
         })
         .catch((err) => {

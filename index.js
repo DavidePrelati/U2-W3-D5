@@ -1,5 +1,6 @@
 const URL = "https://striveschool-api.herokuapp.com/api/product/";
 
+
 window.addEventListener("DOMContentLoaded", () => {
     fetch(URL, {
         method: "GET",

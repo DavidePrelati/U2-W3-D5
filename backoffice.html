@@ -36,12 +36,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h2 class="my-4">Backoffice</h2>
-
+                <h5 id="subtitle" class=" d-inline-block align-bottom"></h5>
                 <form>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome</label>
                         <input type="text" id="name" class="form-control"
-                            placeholder="Inserisci il nome dell'appuntamento" required>
+                            placeholder="Inserisci il nome dell'oggetto" required>
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Descrizione</label>
@@ -49,9 +49,9 @@
                             placeholder="Inserisci una descrizione" rows="4" required></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="imageUrl" class="form-label">Descrizione</label>
-                        <textarea type="text" id="imageUrl" class="form-control"
-                            placeholder="Inserisci un URL" required></textarea>
+                        <label for="imageUrl" class="form-label">URL Immagine</label> 
+                        <textarea type="text" id="imageUrl" class="form-control" placeholder="Inserisci un URL"
+                            required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="brand" class="form-label">Brand</label>
@@ -61,9 +61,12 @@
                         <label for="price" class="form-label">Prezzo</label>
                         <input type="number" id="price" class="form-control" placeholder="0" min="0">
                     </div>
-                   
+
 
                     <button type="submit" class="btn btn-primary">Crea</button>
+                    <button type="button" class="btn btn-danger d-none">
+                        Elimina
+                    </button>
                 </form>
             </div>
         </div>
@@ -74,4 +77,5 @@
     <script src="backoffice.js"></script>
 
 </body>
+
 </html>
