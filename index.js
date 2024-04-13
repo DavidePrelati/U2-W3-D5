@@ -21,16 +21,17 @@ window.addEventListener("DOMContentLoaded", () => {
             products.forEach((product) => {
                 const col = document.createElement("div");
                 col.classList.add("col");
-                col.innerHTML = `<div class="card h-100"> 
-                            <img src=${product.imageUrl} class="card-img-top" alt="...">
-                            <div class="card-body border border-2"> 
-                            <p class="card-text">${product.name}</p> 
+                col.innerHTML = `<div class="card shadow-sm h-100"> 
+                            <img src=${product.imageUrl} class="img-fluid card-img-top" style="height: 200px;">
+                            <div class="card-body mt-auto border border-2"> 
+                            <h3 class="card-text">${product.name}</h3> 
                             <p class="card-text small">By ${product.brand}</p>
                             <p class="card-text text-success">€${product.price}</p> 
                             <a href="details.html?appId=${product._id}" class="btn btn-success">Scopri di più</a>
                             <a href="backoffice.html?appId=${product._id}" class="btn btn-dark">Modifica</a>
                             </div>
-                            </div>`;
+                            </div>
+                `;
                 row.appendChild(col);
             });
         })
